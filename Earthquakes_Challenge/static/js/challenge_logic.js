@@ -50,7 +50,7 @@ let overlays = {
   "Earthquakes": allEarthquakes,
   "Major Earthquakes" : majorEarthquakes
 };
-
+ 
 // Then we add a control to the map that will allow the user to change which
 // layers are visible.
 L.control.layers(baseMaps, overlays).addTo(map);
