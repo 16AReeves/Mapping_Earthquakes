@@ -2,16 +2,34 @@
 console.log("working");
 
 // Create the map object with a center and zoom level.
-let map = L.map('mapid').setView([40.7,-94.5], 4);
+let map = L.map('mapid').setView([37.6213, -122.3790], 5);
 
 // // Create the map object with a center and zoom level.
 // let map = L.map("mapid", {
 //     center: [
-//       40.7, -94.5
+//       40.7, -94.5 //this is the center of the US
 //     ],
 //     zoom: 4
 //   });      this is another way to initialize a map, outlining the lat and long coords and the zoom level (b/t 0-18)
               // useful when adding multiple layers to a map
+
+// Coordinates for each point to be used in the polyline.
+let line = [
+    [37.6213, -122.3790],
+    [30.1975, -97.6664],
+    [43.6777, -79.6248],
+    [40.6413, -73.7781]    
+  ];
+
+// Create a polyline using the line coordinates and make the line red.
+L.polyline(line, {
+    color: "yellow",
+    dashArray: "10",
+    color: "blue",
+    weight: 4,
+    opacity: 0.5
+  }).addTo(map);
+
 
 // Get data from cities.js
 let cityData = cities;
